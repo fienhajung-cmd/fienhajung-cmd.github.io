@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kalkulator THR 2026: Hitung THR Proporsional</title>
+<meta name="description" content="Hitung THR berdasarkan masa kerja dan upah sesuai Permenaker 6/2016, termasuk THR proporsional untuk masa kerja kurang dari 12 bulan.">
+<link rel="canonical" href="https://fienhajung-cmd.github.io/thr/">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../">Hitung<span>Terbuka</span></a>
+  <nav><a href="../gaji-bersih/">Gaji bersih</a><a href="./" aria-current="page">THR</a><a href="../tentang/">Sumber</a><a href="../en/net-salary-calculator/">English</a></nav>
+</div></header>
+<main class="wrap">
+  <h1>Kalkulator THR</h1>
+  <p class="lead">Masukkan upah sebulan dan masa kerja. Hasilnya berupa THR sebelum pajak.</p>
+  <form class="panel" id="form-thr">
+    <div class="grid">
+      <label>Upah sebulan<small>Gaji pokok + tunjangan tetap</small><input name="upah" inputmode="numeric" autocomplete="off" value="6.000.000"></label>
+      <label>Masa kerja, dalam bulan penuh<small>Terhitung sampai hari raya</small><input name="bulan" type="number" min="0" step="1" value="6"></label>
+    </div>
+  </form>
+  <section class="panel" aria-live="polite">
+    <div class="hasil-utama"><span class="label">Perkiraan THR</span><span class="nilai" id="thr-nilai"></span></div>
+    <p id="thr-penjelasan"></p>
+  </section>
+  <h2>Aturan dasarnya</h2>
+  <div class="scroll"><table>
+    <tr><th>Masa kerja</th><th>Besar THR</th></tr>
+    <tr><td>Kurang dari 1 bulan</td><td>Belum berhak</td></tr>
+    <tr><td>1 sampai kurang dari 12 bulan</td><td>Masa kerja / 12 x 1 bulan upah</td></tr>
+    <tr><td>12 bulan atau lebih</td><td>1 bulan upah</td></tr>
+  </table></div>
+  <p>Aturan ini berasal dari Permenaker 6/2016. Bila perjanjian kerja, peraturan perusahaan, atau kebiasaan perusahaan memberi jumlah lebih besar, jumlah yang lebih besar itulah yang berlaku.</p>
+  <h2>Pajak atas THR</h2>
+  <p>THR masuk penghasilan bruto pada bulan dibayarkan, sehingga tarif TER bulan itu bisa melonjak. Selisihnya diperhitungkan lagi pada Desember. Pajak THR belum dihitung di sini.</p>
+  <p class="catatan">Hasilnya perkiraan dan bukan nasihat hukum. Lihat <a href="../tentang/">sumber dan metodologi</a>.</p>
+</main>
+<footer><div class="wrap">HitungTerbuka. Aturan diperiksa terakhir 6 November 2026. <a href="../tentang/">Sumber, metodologi, dan privasi</a>.</div></footer>
+<script type="module" src="../assets/thr-ui.js"></script>
+</body>
+</html>

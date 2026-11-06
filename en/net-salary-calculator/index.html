@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Indonesia Net Salary Calculator 2026: PPh 21 and BPJS</title>
+<meta name="description" content="Estimate Indonesian take-home pay and total employer cost for 2026, with PPh 21 TER withholding, BPJS contributions, and the December tax reconciliation.">
+<link rel="canonical" href="https://fienhajung-cmd.github.io/en/net-salary-calculator/">
+<link rel="alternate" hreflang="id" href="https://fienhajung-cmd.github.io/gaji-bersih/">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../../">Hitung<span>Terbuka</span></a>
+  <nav><a href="./" aria-current="page">Net salary</a><a href="../../tentang/">Sources (ID)</a><a href="../../gaji-bersih/">Bahasa Indonesia</a></nav>
+</div></header>
+<main class="wrap">
+  <h1>Indonesia net salary calculator 2026</h1>
+  <p class="lead">Take-home pay, PPh 21 withholding, BPJS contributions, and total employer cost. Everything runs in your browser.</p>
+  <form class="panel" id="form-gaji">
+    <div class="grid">
+      <label>Monthly base salary (IDR)<input name="pokok" inputmode="numeric" autocomplete="off" value="10,000,000"></label>
+      <label>Fixed allowances<input name="tetap" inputmode="numeric" autocomplete="off" placeholder="0"></label>
+      <label>Variable allowances<small>Taxable, excluded from BPJS base</small><input name="tidakTetap" inputmode="numeric" autocomplete="off" placeholder="0"></label>
+      <label>PTKP tax status
+        <select name="ptkp">
+          <option value="TK/0">TK/0, single, no dependants</option>
+          <option value="TK/1">TK/1, single, 1 dependant</option><option value="TK/2">TK/2, single, 2 dependants</option><option value="TK/3">TK/3, single, 3 dependants</option>
+          <option value="K/0">K/0, married, no dependants</option>
+          <option value="K/1">K/1, married, 1 dependant</option><option value="K/2">K/2, married, 2 dependants</option><option value="K/3">K/3, married, 3 dependants</option>
+        </select>
+      </label>
+      <label>Work risk class (JKK)
+        <select name="jkk">
+          <option value="0.0024">Very low, 0.24%</option><option value="0.0054">Low, 0.54%</option>
+          <option value="0.0089">Medium, 0.89%</option><option value="0.0127">High, 1.27%</option>
+          <option value="0.0174">Very high, 1.74%</option>
+        </select>
+      </label>
+    </div>
+  </form>
+  <section class="panel" id="hasil" aria-live="polite"></section>
+
+  <h2>How it works</h2>
+  <p>Since 2024, employers withhold monthly PPh 21 with an average effective rate (TER) table from January to November. In December they recompute the full-year tax at Article 17 progressive rates and withhold the difference.</p>
+  <p>Example: a base salary of IDR 10,000,000 with status TK/0 and 0.24% JKK. Employer-paid JKK, JKM, and BPJS Health premiums bring taxable gross to IDR 10,454,000, which falls in the 2.5% band of category A, so monthly PPh 21 is IDR 261,350. After employee contributions of IDR 400,000, take-home pay is <strong>IDR 9,338,650</strong>.</p>
+  <h2>Contribution caps for 2026</h2>
+  <div class="scroll"><table>
+    <tr><th>Program</th><th class="n">Employee</th><th class="n">Employer</th><th class="n">Monthly wage cap</th></tr>
+    <tr><td>BPJS Health</td><td class="n">1%</td><td class="n">4%</td><td class="n">IDR 12,000,000</td></tr>
+    <tr><td>Old-age savings (JHT)</td><td class="n">2%</td><td class="n">3.7%</td><td class="n">None</td></tr>
+    <tr><td>Pension (JP)</td><td class="n">1%</td><td class="n">2%</td><td class="n">IDR 11,086,300</td></tr>
+    <tr><td>Death benefit (JKM)</td><td class="n">None</td><td class="n">0.3%</td><td class="n">None</td></tr>
+    <tr><td>Work accident (JKK)</td><td class="n">None</td><td class="n">0.24-1.74%</td><td class="n">None</td></tr>
+  </table></div>
+  <h2>What this does not cover</h2>
+  <p>It assumes the same pay for a full calendar year. It leaves out bonuses, THR, overtime, part-year employment, extra pension schemes, government tax incentives, and special situations such as non-resident tax treatment or treaty relief. Some foreign workers have different BPJS rules, so confirm your own case.</p>
+  <p class="catatan">This is an estimate, not tax advice. Check the official rules or a licensed tax consultant before relying on it for payroll.</p>
+</main>
+<footer><div class="wrap">HitungTerbuka. Rules last checked 6 November 2026. <a href="../../tentang/">Sources and privacy (Indonesian)</a>.</div></footer>
+<script type="module" src="../../assets/gaji-ui.js"></script>
+</body>
+</html>

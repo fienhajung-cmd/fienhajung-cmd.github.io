@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fienhajung-cmd.github.io/sitemap.xml

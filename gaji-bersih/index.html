@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kalkulator Gaji Bersih 2026: PPh 21 TER dan BPJS</title>
+<meta name="description" content="Hitung gaji bersih 2026 dengan PPh 21 TER, BPJS Kesehatan, JHT, dan JP, lengkap dengan perkiraan potongan Desember dan biaya perusahaan.">
+<link rel="canonical" href="https://fienhajung-cmd.github.io/gaji-bersih/">
+<link rel="alternate" hreflang="en" href="https://fienhajung-cmd.github.io/en/net-salary-calculator/">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../">Hitung<span>Terbuka</span></a>
+  <nav><a href="./" aria-current="page">Gaji bersih</a><a href="../thr/">THR</a><a href="../tentang/">Sumber</a><a href="../en/net-salary-calculator/">English</a></nav>
+</div></header>
+<main class="wrap">
+  <h1>Kalkulator gaji bersih 2026</h1>
+  <p class="lead">PPh 21 metode TER, BPJS, perkiraan Desember, dan biaya perusahaan. Data Anda tidak dikirim ke mana pun.</p>
+  <form class="panel" id="form-gaji">
+    <div class="grid">
+      <label>Gaji pokok per bulan<input name="pokok" inputmode="numeric" autocomplete="off" value="10.000.000"></label>
+      <label>Tunjangan tetap<input name="tetap" inputmode="numeric" autocomplete="off" placeholder="0"></label>
+      <label>Tunjangan tidak tetap<small>Kena pajak, bukan dasar BPJS</small><input name="tidakTetap" inputmode="numeric" autocomplete="off" placeholder="0"></label>
+      <label>Status PTKP
+        <select name="ptkp">
+          <option value="TK/0">TK/0, lajang tanpa tanggungan</option>
+          <option value="TK/1">TK/1</option><option value="TK/2">TK/2</option><option value="TK/3">TK/3</option>
+          <option value="K/0">K/0, menikah tanpa tanggungan</option>
+          <option value="K/1">K/1</option><option value="K/2">K/2</option><option value="K/3">K/3</option>
+        </select>
+      </label>
+      <label>Risiko kerja (JKK)
+        <select name="jkk">
+          <option value="0.0024">Sangat rendah, 0,24%</option><option value="0.0054">Rendah, 0,54%</option>
+          <option value="0.0089">Sedang, 0,89%</option><option value="0.0127">Tinggi, 1,27%</option>
+          <option value="0.0174">Sangat tinggi, 1,74%</option>
+        </select>
+      </label>
+    </div>
+  </form>
+  <section class="panel" id="hasil" aria-live="polite"></section>
+
+  <h2>Cara menghitungnya</h2>
+  <p>Contoh gaji pokok Rp10.000.000, status TK/0, dan JKK 0,24%. Premi yang dibayar perusahaan (JKK Rp24.000, JKM Rp30.000, BPJS Kesehatan Rp400.000) menambah penghasilan bruto pajak menjadi Rp10.454.000. Angka itu masuk lapisan TER kategori A sebesar 2,5%, sehingga PPh 21 bulanan Rp261.350.</p>
+  <p>Karyawan juga membayar BPJS Kesehatan Rp100.000, JHT Rp200.000, dan JP Rp100.000. Gaji bersihnya Rp10.000.000 - Rp400.000 - Rp261.350 = <strong>Rp9.338.650</strong>.</p>
+  <h2>Kenapa potongan Desember berbeda?</h2>
+  <p>TER hanya dipakai Januari-November. Pada Desember, pajak setahun dihitung ulang dengan tarif Pasal 17, lalu dikurangi yang sudah dipotong. Pada contoh di atas, pajak setahun Rp3.277.200 dikurangi Rp2.874.850 menghasilkan PPh 21 Desember Rp402.350.</p>
+  <h2>Kategori TER</h2>
+  <div class="scroll"><table>
+    <tr><th>Kategori</th><th>Status PTKP</th><th class="n">Bebas potongan sampai</th></tr>
+    <tr><td>A</td><td>TK/0, TK/1, K/0</td><td class="n">Rp5.400.000</td></tr>
+    <tr><td>B</td><td>TK/2, TK/3, K/1, K/2</td><td class="n">Rp6.200.000</td></tr>
+    <tr><td>C</td><td>K/3</td><td class="n">Rp6.600.000</td></tr>
+  </table></div>
+  <h2>Yang belum dihitung</h2>
+  <p>Kalkulator ini mengasumsikan penghasilan sama setiap bulan selama setahun penuh. Bonus, THR, lembur, pegawai masuk di tengah tahun, iuran pensiun tambahan, dan insentif pajak ditanggung pemerintah belum dihitung.</p>
+  <p class="catatan">Hasilnya perkiraan dan bukan nasihat pajak. Lihat <a href="../tentang/">sumber dan metodologi</a>.</p>
+</main>
+<footer><div class="wrap">HitungTerbuka. Aturan diperiksa terakhir 6 November 2026. <a href="../tentang/">Sumber, metodologi, dan privasi</a>.</div></footer>
+<script type="module" src="../assets/gaji-ui.js"></script>
+</body>
+</html>
